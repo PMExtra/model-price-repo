@@ -12,7 +12,8 @@
     "o3-",
     "o3",
     "o4-",
-    "deepseek-"
+    "deepseek-",
+    "zai/"
   ],
   "exclude_patterns": [
     "sample_spec"
@@ -45,11 +46,43 @@
     "codex-auto-review": {
       "source": "gpt-5.5",
       "description": "Alias for gpt-5.5 with auto-review enabled"
+    },
+    "glm-4.5-air": {
+      "source": "zai/glm-4.5-air",
+      "description": "Alias for zai"
+    },
+    "glm-4.7": {
+      "source": "zai/glm-4.7",
+      "description": "Alias for zai"
+    },
+    "glm-5": {
+      "source": "zai/glm-5",
+      "description": "Alias for zai"
+    },
+    "glm-5.1": {
+      "source": "zai/glm-5.1",
+      "description": "Alias for zai"
     }
   },
   "cache_1hr_auto_fill": {
     "model_prefix": "claude-",
     "ratio": 1.6
   },
-  "custom_models": {}
+  "custom_models": {
+    "glm-5.2": {
+      "cache_creation_input_token_cost": 0,
+      "cache_read_input_token_cost": 2.6e-07,
+      "input_cost_per_token": 1.4e-06,
+      "output_cost_per_token": 4.4e-06,
+      "litellm_provider": "zai",
+      "max_input_tokens": 1000000,
+      "max_output_tokens": 128000,
+      "mode": "chat",
+      "supports_function_calling": true,
+      "supports_prompt_caching": true,
+      "supports_reasoning": true,
+      "supports_tool_choice": true,
+      "source": "https://docs.z.ai/guides/overview/pricing"
+    }
+  }
 }
